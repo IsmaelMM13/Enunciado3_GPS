@@ -19,7 +19,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Generar código desde OpenAPI (Python Flask)
-        run: java -jar openapi-generator-cli.jar generate -i usuarios.yaml -g python-flask -o ./openapi_server
+        run: java -jar openapi-generator-cli.jar generate -i usuarios.yml -g python-flask -o ./openapi_server
 
       - name: Comprimir el código generado
         run: zip -r openapi_server.zip openapi_server
